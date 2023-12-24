@@ -3,6 +3,7 @@ import Nav from './components/Nav'
 import { Routes, Link, Route } from 'react-router-dom'
 import Create from './components/Create'
 import List from './components/List'
+import Edit from './components/Edit'
 
 
 
@@ -19,6 +20,7 @@ const App = () => {
       {/* <Route path="/"/>  */}
       <Route path="/create" element={<Create thoughts={thoughts} setthoughts={setthoughts}/>}/> 
       <Route path="/list" element={<List thoughts={thoughts} setthoughts={setthoughts}/>}/> 
+      <Route path="/list/edit/:id" element={<Edit thoughts={thoughts} setthoughts={setthoughts}/>}/> 
 
     </Routes>
     </div>

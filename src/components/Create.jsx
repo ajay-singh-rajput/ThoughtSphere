@@ -16,8 +16,9 @@ const Create = (props) => {
             toast.error('Title and description must have min-mum 4 character');
         } else{
             const newthought = {title, description};
-            // const tho = [...thoughts, newthought]
-            setthoughts([...thoughts, newthought]);
+            const tho = [...thoughts, newthought]
+            setthoughts(tho);
+            localStorage.setItem('thoughts', JSON.stringify(tho))
             toast.success('Thoughts saved successfully');
             setdescription('');
             settitle('');
